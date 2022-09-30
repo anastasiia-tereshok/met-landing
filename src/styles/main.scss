@@ -69,6 +69,10 @@ $accentDarkColor: #161616;
   }
 }
 
+@mixin last {
+  margin: 0;
+}
+
 .page {
   font-family: "Cinzel", serif;
   color: $accentDarkColor;
@@ -94,6 +98,29 @@ $accentDarkColor: #161616;
       transform: translateX(0);
     }
   }
+
+  &__section {
+    margin-bottom: 100px;
+
+    @include onTablet {
+      margin-bottom: 140px;
+    }
+  }
+
+  &__section-title {
+    margin: 0 0 32px;
+
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 100%;
+    letter-spacing: -1.5px;
+
+    @include onTablet {
+      margin: 0;
+
+      font-size: 48px;
+    }
+  }
 }
 
 .container {
@@ -107,6 +134,19 @@ $accentDarkColor: #161616;
 
   @include onDesktop {
     padding: 0 120px;
+  }
+}
+
+.grid {
+  @include onTablet {
+    display: grid;
+    grid-template-columns: 1fr 70px 1fr;
+  }
+
+  @include onDesktop {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
   }
 }
 
@@ -292,5 +332,82 @@ $accentDarkColor: #161616;
     position: relative;
 
     @include lineEffect;
+  }
+}
+
+.about-us {
+  font-weight: 700;
+
+  &__titles {
+    @include onTablet {
+      grid-column: 1 / 2;
+    }
+
+    @include onDesktop {
+      grid-column: 1 / 6;
+    }
+  }
+
+  &__subtitle {
+    margin: 0 0 4px;
+
+    font-size: 12px;
+    line-height: 140%;
+    color: $accentMainColor;
+  }
+
+  &__chedule {
+    margin: 0 0 24px;
+
+    display: grid;
+    grid-template-columns: 148px 1fr;
+
+    @include onTablet {
+      grid-column: 3 / 4;
+    }
+
+    @include onDesktop {
+      grid-column: 6 / 13;
+    }
+
+    &--last {
+      @include last;
+    }
+  }
+
+  &__chedule-title {
+    margin: 0 0 16px;
+
+    font-size: 24px;
+    line-height: 30px;
+
+    grid-column: 1 / 3;
+  }
+
+  &__chedule-time {
+    margin: 0 0 8px;
+
+    font-size: 16px;
+    line-height: 27px;
+
+    &--last {
+      grid-column: 1 / 3;
+      
+      @include last;
+    }
+  }
+
+  &__chedule-days {
+    margin: 0 0 8px;
+
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: 400;
+
+    &--last {
+      grid-column: 1 / 3;
+      
+      @include last;
+    }
   }
 }
