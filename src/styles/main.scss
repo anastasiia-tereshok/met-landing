@@ -123,6 +123,8 @@ $accentDarkColor: #161616;
     line-height: 100%;
     letter-spacing: -1.5px;
 
+    text-align: center;
+
     @include onTablet {
       margin: 0;
 
@@ -463,6 +465,8 @@ $accentDarkColor: #161616;
   }
 
   &__item {
+    display: flex;
+
     &--1-4 {
       @include onTablet {
         grid-column: 1 / 5;
@@ -498,38 +502,19 @@ $accentDarkColor: #161616;
     }
   }
 
-  &__photo-container {
-    position: relative;
-
-    box-sizing: border-box;
-    width: 100%;
-
-    &::after {
-      content: "";
-      display: block;
-      padding-bottom: 100%;
-
-      @include onDesktop {
-        padding-bottom: 0;
-      }
-    }
-
-    @include onTablet {
-      max-height: 320px;
-    }
-
-    @include onDesktop {
-      height: 320px;
-    }
-  }
-
   &__photo {
-    position: absolute;
     width: 100%;
-    height: 100%;
+    aspect-ratio: 1/1;
+    max-height: 320px;
 
     object-fit: cover;
     object-position: left;
+
+    &--rectangle {
+      @include onTablet {
+        aspect-ratio: unset;
+      }
+    }
   }
 
   &__description {
@@ -578,5 +563,21 @@ $accentDarkColor: #161616;
 
   &:active {
     background-color: #eb343d;
+  }
+}
+
+.explore {
+  &__title {
+    margin: 0 0 40px;
+  }
+
+  &__gallery {
+    display: flex;
+    flex-direction: column;
+
+    @include onDesktop {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
