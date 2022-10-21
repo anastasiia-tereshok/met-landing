@@ -24,21 +24,21 @@
             </a>
   
             <a 
-              href="#contact-us" 
+              href="#contacts" 
               class="icon icon--phone"
             >
               <div class="icon__tooltip numbers">
-                <div class="numbers__title">
+                <div class="numbers__title numbers__title--tooltip">
                   The Met Fifth Avenue
                 </div>
-                <div class="numbers__number">
+                <div class="numbers__link">
                   +1 212-535-7710
                 </div>
 
-                <div class="numbers__title">
+                <div class="numbers__title  numbers__title--tooltip">
                   The Met Cloisters
                 </div>
-                <div class="numbers__number">
+                <div class="numbers__link">
                   +1 212-923-3700
                 </div>
               </div>
@@ -84,16 +84,19 @@
                 About Us
               </a>
             </li>
+
             <li class="menu__list-item">
               <a href="#on-view" class="menu__list-link">
                 Now on view
               </a>
             </li>
+
             <li class="menu__list-item">
               <a href="#explore" class="menu__list-link">
                 Explore Online
               </a>
             </li>
+
             <li class="menu__list-item">
               <a href="#contacts" class="menu__list-link">
                 Contacts
@@ -101,20 +104,20 @@
             </li>
           </ul>
 
-          <div class="numbers">
-            <div class="numbers__title">
+          <div class="menu__numbers numbers">
+            <div class="menu__numbers-title numbers__title">
               The Met Fifth Avenue
             </div>
-            <a href="tel: +1 212-535-7710" class="numbers__number">
+            <a href="tel: +1 212-535-7710" class="numbers__link">
               +1 212-535-7710
             </a>
 
-            <div class="numbers__title">
+            <div class="menu__numbers-title numbers__title">
               The Met Cloisters
             </div>
             <a 
               href="tel: +1 212-923-3700" 
-              class="numbers__number numbers__number--last"
+              class="numbers__link numbers__link--last"
             >
               +1 212-923-3700
             </a>
@@ -328,7 +331,7 @@
       </div>
     </section>
 
-    <section class="page__section explore">
+    <section class="page__section explore" id="explore">
       <div class="container">
         <div class="explore__title-grid">
           <h3 class="page__section-title explore__title">
@@ -414,5 +417,92 @@
         </div>
       </div>
     </section>
+
+    <section class="page__section page__section--last contacts" id="contacts">
+      <div class="container">
+        <h3 class="page__section-title contacts__title">
+          Contacts
+        </h3>
+
+        <div class="contacts__grid">
+          <div class="contacts__left">
+            <div class="contacts__numbers numbers">
+              <div class="contacts__numbers-title numbers__title">
+                The Met Fifth Avenue
+              </div>
+  
+              <p class="numbers__subtitle">
+                Phone
+              </p>
+              <a href="tel: +1 212-535-7710" class="numbers__link">
+                +1 212-535-7710
+              </a>
+  
+              <p class="numbers__subtitle">
+                Address
+              </p>
+              <a href="https://goo.gl/maps/xAQKXhbRTy7J2uNw8" class="numbers__link">
+                1000 Fifth Avenue
+                <br>
+                New York, NY 10028
+              </a>
+            </div>
+
+            <div class="contacts__numbers numbers">
+              <div class="numbers__title">
+                The Met Cloisters
+              </div>
+  
+              <p class="numbers__subtitle">
+                Phone
+              </p>
+              <a 
+                href="tel: +1 212-923-3700" 
+                class="numbers__link numbers__link--last"
+              >
+                +1 212-923-3700
+              </a>
+  
+              <p class="numbers__subtitle">
+                Address
+              </p>
+              <a href="https://goo.gl/maps/U2joLcBNSMWEppFg7" class="numbers__link">
+                99 Margaret Corbin Drive
+                <br>
+                Fort Tryon Park
+                <br>
+                New York, NY 10040
+              </a>
+            </div>
+          </div>
+
+          <div class="contacts__right">
+            <form method="get" class="contacts__form">
+              <input
+                class="form-field" 
+                type="text" 
+                name="name"
+                placeholder="Name"
+              >
+
+              <input
+                class="form-field" 
+                type="email" 
+                name="email"
+                placeholder="Email"
+              >
+
+              <textarea class="form-field form-field--textarea" name="message" placeholder="Message"></textarea>
+
+              <a href="#" class="button">Send</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+
+    </footer>
   </body>
 </html>
