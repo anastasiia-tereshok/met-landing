@@ -1,0 +1,46 @@
+.numbers {
+  display: flex;
+  flex-direction: column;
+    
+  &__title {
+    font-weight: 700;
+    text-transform: uppercase;
+  
+    &--tooltip {
+      width: max-content;
+    }
+  }
+  
+  &__subtitle {
+    margin: 0 0 4px;
+  }
+  
+  &__link {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+  
+    display: block;
+    margin-bottom: 8px;
+  
+    &--last {
+      margin-bottom: 16px;
+    }
+  }
+  
+  &__action {
+    display: block;
+    width: max-content;
+  
+    text-decoration: none;
+    text-transform: uppercase;
+    color: inherit;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 2px;
+  
+    @include lineEffect;
+  }
+}

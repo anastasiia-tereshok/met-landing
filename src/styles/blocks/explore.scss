@@ -1,0 +1,42 @@
+.explore {
+  &__title-grid {
+    @include grid;
+  }
+  
+  &__title {
+    margin-bottom: 40px;
+    grid-column: 4 / 10;
+  
+    @include onDesktop {
+      margin-bottom: 48px;
+    }
+  }
+  
+  &__gallery {
+    @include grid;
+  }
+  
+  &__gallery-variant {
+    @include onTablet {
+      grid-column: 4 / 10;
+    }
+  
+    &--1-4 {
+      @include onDesktop {
+        grid-column: 1 / 5;
+      }
+    }
+  
+    &--5-8 {
+      @include onDesktop {
+        grid-column: 5 / 9;
+      }
+    }
+  
+    &--9-12 {
+      @include onDesktop {
+        grid-column: 9 / 13;
+      }
+    }
+  }
+}

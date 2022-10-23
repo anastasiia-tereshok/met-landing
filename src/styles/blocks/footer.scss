@@ -1,0 +1,11 @@
+.footer {
+  background-image: url(../images/photo/footer.png);
+  height: 180px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+  @include onDesktop {
+    height: 360px;
+  }
+}

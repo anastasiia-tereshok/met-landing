@@ -1,0 +1,23 @@
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  
+  width: 100%;
+  height: 56px;
+  background-color: $accentMainColor;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  
+  transition: background-color 0.3s;
+  
+  &:hover {
+    background-color: #ae1c23;
+  }
+  
+  &:active {
+    background-color: #eb343d;
+  }
+}

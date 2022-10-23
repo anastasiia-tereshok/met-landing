@@ -1,0 +1,51 @@
+.contacts {
+  &__title {
+    margin-bottom: 48px;
+  }
+  
+  &__grid {
+    @include grid;
+  }
+  
+  &__left {
+    @include onTablet {
+      grid-column: 1 / 7;
+    }
+  
+    @include onDesktop {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0 24px;
+    }
+  }
+  
+  &__right {
+    @include onTablet {
+      grid-column: 7 / 13;
+    }
+  
+    @include onDesktop {
+      grid-column: 8 / 13;
+    }
+  }
+  
+  &__numbers {
+    margin-bottom: 48px;
+  
+    &--last {
+      @include onTablet {
+        @include last;
+      }
+    }
+  }
+  
+  &__numbers-title {
+    margin-bottom: 16px;
+  }
+  
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+}

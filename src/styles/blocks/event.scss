@@ -1,0 +1,100 @@
+.event {
+  &__photos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 20px;
+  
+    @include grid;
+  
+    margin-bottom: 24px;
+  
+    &--3 {
+      grid-template-columns: repeat(3, 1fr);
+  
+      @include onTablet {
+        grid-template-columns: repeat(2, 1fr);
+      }
+  
+      @include onDesktop {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
+  
+  &__item {
+    display: flex;
+  
+    &--1-4 {
+      @include onTablet {
+        grid-column: 1 / 5;
+      }
+    }
+  
+    &--5-12 {
+      @include onTablet {
+        grid-column: 5 / 13;
+      }
+    }
+  
+    &--1-8 {
+      @include onTablet {
+        grid-column: 1 / 9;
+      }
+    }
+  
+    &--9-12 {
+      @include onTablet {
+        grid-column: 9 / 13;
+      }
+    }
+  
+    &--hidden {
+      @include onTablet {
+        display: none;
+      }
+  
+      @include onDesktop {
+        display: block;
+      }
+    }
+  }
+  
+  &__photo {
+    width: 100%;
+    aspect-ratio: 1/1;
+    max-height: 320px;
+  
+    object-fit: cover;
+    object-position: left;
+  
+    &--rectangle {
+    @include onTablet {
+        aspect-ratio: unset;
+      }
+    }
+  }
+  
+  &__description {
+    margin-bottom: 48px;
+  
+    &--last {
+      margin-bottom: 40px;
+    }
+  }
+  
+  &__description-title {
+    margin: 0;
+  }
+  
+  &__description-link {
+    font-weight: 700;
+    color: $accentMainColor;
+    text-decoration: none;
+  
+    cursor: pointer;
+  }
+  
+  &__description-date {
+    margin: 0;
+  }
+}

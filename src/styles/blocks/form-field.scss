@@ -1,0 +1,44 @@
+.form-field {
+  display: block;
+  box-sizing: border-box;
+  
+  background-color: #f8f8fa;
+  padding: 14px 12px;
+  
+  border: 1px solid transparent;
+  transition: all 0.3s;
+  
+  font-family: "Cinzel", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $accentDarkColor;
+  
+  &:hover {
+    border: 1px solid #d5d7de;
+  }
+  
+  &:hover::placeholder {
+    color: $accentDarkColor;
+  }
+  
+  &:focus {
+    border-color: $accentDarkColor;
+  }
+  
+  &--textarea {
+    height: 144px;
+    resize: none;
+    margin-bottom: 8px;
+  }
+  
+  &::placeholder {
+    font-family: "Cinzel", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #7e7e83;
+  }
+}

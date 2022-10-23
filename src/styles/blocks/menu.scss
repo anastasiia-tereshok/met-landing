@@ -1,0 +1,49 @@
+.menu {
+  background-color: $accentMainColor;
+  
+  &__content {
+    @include content;
+  }
+  
+  &__top {
+    @include topActions;
+  
+    margin-bottom: 40px;
+  
+    @include onDesktop {
+      margin-bottom: 56px;
+    }
+  }
+  
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  &__list-item {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  
+    margin-bottom: 32px;
+    width: max-content;
+  }
+  
+  &__list-link {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+  
+    @include lineEffect;
+  }
+  
+  &__numbers {
+    color: #fff;
+  }
+  
+  &__numbers-title {
+    margin: 0;
+  }
+}

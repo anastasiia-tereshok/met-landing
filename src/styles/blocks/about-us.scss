@@ -1,0 +1,79 @@
+.about-us {
+  font-weight: 700;
+  
+  &__grid {
+    @include grid;
+  }
+  
+  &__titles {
+    margin-bottom: 32px;
+    
+    @include onTablet {
+      margin-bottom: 0;
+      grid-column: 1 / 6;
+    }
+  }
+  
+  &__subtitle {
+    margin: 0 0 4px;
+  
+    font-size: 12px;
+    line-height: 140%;
+    color: $accentMainColor;
+  }
+  
+  &__title {
+    text-align: left;
+  }
+  
+  &__chedule {
+    margin: 0 0 24px;
+  
+    display: grid;
+    grid-template-columns: 148px 1fr;
+  
+    @include onTablet {
+      grid-column: 6 / 13;
+    }
+  
+    &--last {
+      @include last;
+    }
+  }
+  
+  &__chedule-title {
+    margin: 0 0 16px;
+  
+    font-size: 24px;
+    line-height: 30px;
+  
+    grid-column: 1 / 3;
+  }
+  
+  &__chedule-time {
+    margin: 0 0 8px;
+  
+    font-size: 16px;
+    line-height: 27px;
+  
+    &--last {
+      grid-column: 1 / 3;
+        
+      @include last;
+    }
+  }
+  
+  &__chedule-days {
+    margin: 0 0 8px;
+  
+    font-size: 16px;
+    line-height: 27px;
+    font-weight: 400;
+  
+    &--last {
+      grid-column: 1 / 3;
+        
+      @include last;
+    }
+  }
+}
